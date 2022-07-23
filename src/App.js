@@ -5,7 +5,7 @@ import TextForm from './components/TextForm';
 import React, { useState } from 'react'
 import Alert from './components/Alert';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,   //using HashRouter because nothing after '#' in the URL is sent to server
   Routes,
   Route,
   
@@ -44,7 +44,7 @@ function App() {
   return (
     <>
     <Router>
-    <Navbar title ="TextUtils" mode={mode} toggleMode={toggleMode} />
+    <Navbar title ="TextUtils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert} />
     <div className="container my-3">
     <Routes>
